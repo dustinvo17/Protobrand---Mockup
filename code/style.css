@@ -1,0 +1,117 @@
+*,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif; }
+
+img {
+  width: 100%;
+  height: 100%; }
+
+.container {
+  max-width: 421px;
+  margin: 0 auto; }
+
+.survey-question {
+  padding: 35px 25px 30px 25px;
+  line-height: 2; }
+
+.survey-brand--container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+.survey-brand--item {
+  display: flex;
+  flex-direction: column;
+  text-align: center; }
+  .survey-brand--item__img {
+    display: flex;
+    align-items: stretch;
+    flex-grow: 1;
+    width: 50%;
+    height: 100px;
+    margin: 0 auto; }
+    .survey-brand--item__img--nike {
+      width: 80%; }
+  .survey-brand--item .brand-name {
+    --afterElemWidth: 0;
+    position: relative;
+    font-size: 14px;
+    padding-bottom: 2px;
+    color: #888888;
+    border-bottom: 1px solid #cacece; }
+    .survey-brand--item .brand-name:after {
+      content: "";
+      width: var(--afterElemWidth);
+      height: 3px;
+      position: absolute;
+      bottom: -3px;
+      background: #2C57DA;
+      left: 0; }
+    .survey-brand--item .brand-name--nike {
+      --afterElemWidth: 100%; }
+    .survey-brand--item .brand-name--checked {
+      font-size: 16px !important;
+      font-weight: 700;
+      color: black !important; }
+
+.survey-checkbox {
+  padding: 30px 21px 20px 21px; }
+  .survey-checkbox--item {
+    width: 379px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #cacece; }
+    .survey-checkbox--item:not(:last-child) {
+      margin-bottom: 10px; }
+    .survey-checkbox--item input {
+      overflow: hidden;
+      -webkit-appearance: none;
+      background-color: white;
+      border: 1px solid #cacece;
+      padding: 9px;
+      border-radius: 3px;
+      display: inline-block;
+      position: relative;
+      outline: none; }
+      .survey-checkbox--item input:checked:after {
+        content: '\2714';
+        font-size: 14px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        font-weight: 900;
+        top: 0px;
+        left: 3px;
+        color: #2C57DA; }
+
+.survey-dot {
+  width: 41px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; }
+  .survey-dot div {
+    width: 7px;
+    height: 7px;
+    border: 1px solid #cacece;
+    border-radius: 50%; }
+    .survey-dot div:nth-child(1) {
+      background: #cacece;
+      transform: scale(1.5); }
+
+.survey-button {
+  display: none;
+  justify-content: center;
+  margin-top: 10px; }
+  .survey-button button {
+    outline: none;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 3px;
+    background: #DFDFDF;
+    color: #888888;
+    font-weight: 700;
+    box-shadow: 0.5px 2px rgba(0, 0, 0, 0.3); }
