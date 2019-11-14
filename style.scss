@@ -42,7 +42,7 @@ img {
         &--container {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
-
+           
         }
 
         &--item {
@@ -119,7 +119,7 @@ img {
         padding: 30px 21px 20px 21px;
 
         &--item {
-            width: 379px;
+            max-width: 379px;
             padding: 15px;
             display: flex;
             justify-content: space-between;
