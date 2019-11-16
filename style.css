@@ -1,0 +1,129 @@
+*,
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.survey-question {
+  padding: 35px 25px 30px 25px;
+  line-height: 2;
+}
+
+.survey-brand--item {
+  padding: 0 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.survey-brand--item__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 50%;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.survey-brand--item__img--nike {
+  width: 80%;
+}
+
+.survey-brand--item .brand-name {
+  --afterElemWidth: 0;
+  position: relative;
+  font-size: 14px;
+  margin-top: 18px;
+  padding-bottom: 2px;
+  color: #888888;
+  border-bottom: 1px solid #cacece;
+}
+
+.survey-brand--item .brand-name:after {
+  content: "";
+  width: var(--afterElemWidth);
+  height: 3px;
+  position: absolute;
+  bottom: -3px;
+  background: #2C57DA;
+  left: 0;
+}
+
+.survey-brand--item .brand-name--nike {
+  --afterElemWidth: 100%;
+}
+
+.survey-brand--item .brand-name--checked {
+  font-size: 16px !important;
+  font-weight: 700;
+  color: black !important;
+}
+
+.survey-checkbox {
+  padding: 30px 21px 20px 21px;
+}
+
+.survey-checkbox--item {
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #cacece;
+}
+
+.survey-checkbox--item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.survey-dot {
+  width: 41px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.survey-dot div {
+  width: 7px;
+  height: 7px;
+  border: 1px solid #cacece;
+  border-radius: 50%;
+}
+
+.survey-dot div:nth-child(1) {
+  background: #cacece;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.survey-button {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10px;
+}
+/*# sourceMappingURL=style.css.map */

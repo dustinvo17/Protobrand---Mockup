@@ -3,7 +3,7 @@ window.onload = init
 function init() {
     let countCheckedBoxes = 0 // TO CHECK IF THE USER CLICK THE BOX, IF > 1
     let buttonNext = $('.survey-button')
-    let brandNameList = $('p')
+    let brandNameList = $('.brand-name')
     let brandLogoList = $('.survey-brand--item__img')
     let inputCheckBoxes = $('input[type="checkbox"]')
     let currentBrandIndex = 0
@@ -17,15 +17,11 @@ function init() {
         inputCheckBoxes.prop('checked', false);
         countCheckedBoxes = 0
         // DYNAMIC STYLING OF THE LOGO AND NAME OF BRAND 
-        $(brandLogoList[currentBrandIndex]).css({
-            "width": '50%'
-        })
+        $(brandLogoList[currentBrandIndex]).removeClass('current-active')
 
         $(brandNameList[currentBrandIndex]).removeClass('brand-name--checked')
         currentBrandIndex++
-        $(brandLogoList[currentBrandIndex]).css({
-            "width": '80%'
-        })
+        $(brandLogoList[currentBrandIndex]).addClass('current-active')
         $(brandNameList[currentBrandIndex]).attr("style", "--afterElemWidth:100%")
         $(brandNameList[currentBrandIndex]).addClass('brand-name--checked')
         // RESET NEXT BUTTON STYLING AND THE BACKGROUND COLOR OF THE PREVIOUS CHECKED BOXES
@@ -39,6 +35,7 @@ function init() {
             $('.survey-dot').css('display', 'none')
             buttonNext.css('display', 'flex')
             dynamicInputContainer(this, true)
+
             dynamicNextBtn(countCheckedBoxes)
         } else {
             countCheckedBoxes--
