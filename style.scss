@@ -45,9 +45,9 @@ body {
             // STYLING LAYOUT OF LOGO IMAGES
             &__img {
                 display: flex;
+                justify-content: center;
+                align-items: center;
 
-
-                width: 100%;
                 transform: scale(0.5);
                 -webkit-transform: -webkit-scale(0.5);
                 flex-grow: 1;

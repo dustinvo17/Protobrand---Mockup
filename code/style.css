@@ -16,8 +16,10 @@ body {
   text-align: center; }
   .survey-brand--item__img {
     display: flex;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
     transform: scale(0.5);
+    -webkit-transform: -webkit-scale(0.5);
     flex-grow: 1; }
   .survey-brand--item .brand-name {
     justify-self: flex-end;
@@ -70,6 +72,7 @@ body {
         content: '\2713\0020';
         font-size: 14px;
         transform: translateY(-15%);
+        -webkit-transform: -webkit-translateY -15%;
         width: 100%;
         height: 100%;
         position: absolute;
@@ -101,4 +104,5 @@ body {
     outline: none !important; }
 
 .current-active {
-  transform: scale(0.8); }
+  transform: scale(0.8);
+  -webkit-transform: -webkit-scale(0.8); }
