@@ -13,17 +13,42 @@ function init() {
         if (currentBrandIndex === 3) {
             return
         }
+        // function to return dynamic image url base on active status
+        function returnImgSrc(active) {
+            let imgSrc = $(brandLogoList[currentBrandIndex]).children().attr('src')
+            if (active) {
+                return (imgSrc.replace('g-', ''))
+
+            } else {
+                return ('./logo/g-' + imgSrc.slice(7))
+            }
+
+        }
+        // function return either logo brand element or name brand element in order to add dynamic styling . Make code clean and consistent.
+        function brandComponent(logo) {
+            // logo === true will return the logo brand element , else will return name brand element
+            if (logo) {
+                return $(brandLogoList[currentBrandIndex])
+            } else {
+                return $(brandNameList[currentBrandIndex])
+            }
+        }
+
         // RESET CHECKBOXES WHEN NEVER USER CLICK NEXT TO NEW BRANDING SURVEY
         inputCheckBoxes.prop('checked', false);
         countCheckedBoxes = 0
         // DYNAMIC STYLING OF THE LOGO AND NAME OF BRAND 
-        $(brandLogoList[currentBrandIndex]).removeClass('current-active')
+        brandComponent(true).removeClass('current-active')
+        brandComponent(true).children().attr('src', returnImgSrc(false))
+        brandComponent(false).removeClass('brand-name--checked')
 
-        $(brandNameList[currentBrandIndex]).removeClass('brand-name--checked')
+
+
         currentBrandIndex++
-        $(brandLogoList[currentBrandIndex]).addClass('current-active')
-        $(brandNameList[currentBrandIndex]).attr("style", "--afterElemWidth:100%")
-        $(brandNameList[currentBrandIndex]).addClass('brand-name--checked')
+        brandComponent(true).children().attr('src', returnImgSrc(true))
+        brandComponent(true).addClass('current-active')
+        brandComponent(false).attr("style", "--afterElemWidth:100%")
+        brandComponent(false).addClass('brand-name--checked')
         // RESET NEXT BUTTON STYLING AND THE BACKGROUND COLOR OF THE PREVIOUS CHECKED BOXES
         resetCheckBoxContainer(inputCheckBoxes)
         dynamicNextBtn(countCheckedBoxes)

@@ -39,24 +39,18 @@ body {
             padding: 0 !important;
             display: flex;
             flex-direction: column;
+
             text-align: center;
 
             // STYLING LAYOUT OF LOGO IMAGES
             &__img {
                 display: flex;
+
+
                 width: 100%;
-
-                // DEFAULT BIGGEST IMAGE FOR NIKE
-
-
-
+                transform: scale(0.5);
                 flex-grow: 1;
-                width: 50%;
 
-
-                height: 100px;
-
-                margin: 0 auto;
 
 
 
@@ -66,10 +60,11 @@ body {
 
             // STYLING LAYOUT OF BRANDING NAMES
             & .brand-name {
+                justify-self: flex-end;
                 --afterElemWidth: 0;
                 position: relative;
-                font-size: 14px;
-                margin-top: 18px;
+                font-size: 12px;
+                margin-bottom: 0;
                 padding-bottom: 2px;
                 color: #888888;
                 border-bottom: 1px solid #cacece;
@@ -94,7 +89,7 @@ body {
 
                 // ACTIVE CLASS ( ADDED WHEN USER CLICK TO NEXT BUTTON ) , STYLING THE BRANDING NAMES //
                 &--checked {
-                    font-size: 16px !important;
+                    font-size: 14px !important;
                     font-weight: 700;
                     color: black !important;
                 }
@@ -121,30 +116,37 @@ body {
             }
 
             // BUILDING CUSTOM STYLING CHECKBOX
+
             & input {
+
                 overflow: hidden;
                 -webkit-appearance: none;
                 background-color: white;
                 border: 1px solid #cacece;
-                width:18px;
-                height:18px;
+                width: 18px;
+                height: 18px;
                 border-radius: 3px;
-                display: inline-block;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 position: relative;
                 outline: none;
-              &:checked:after{
+
+                &:checked:after {
+
                     content: '\2713\0020';
                     font-size: 14px;
-                    width:100%;
-                    height:100%;
+                    transform: translateY(-15%);
+                    width: 100%;
+                    height: 100%;
                     position: absolute;
-                  
+                    border: none;
                     font-weight: 900;
                     top: 0;
-                    left:0;
+                    left: 0;
                     text-align: center;
                     color: #2C57DA;
-              }
+                }
             }
         }
     }
@@ -172,13 +174,11 @@ body {
 
     // STYLING NEXT BUTTON
     &-button {
+
         & button {
+
             outline: none !important;
-            letter-spacing: 1px;
-            border: none;
-            padding: 5px 20px;
-            border-radius: 3px;
-            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+
         }
 
         display: none;
@@ -190,5 +190,5 @@ body {
 
 // class scale up logo brand when user next the survey
 .current-active {
-    transform: scale(1.2);
+    transform: scale(0.8);
 }

@@ -14,71 +14,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
     <div class="container">
         <div class="survey-question row">
             <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. UT posuere semper mi, ac consectetur lorem
-            dignissim eu. Curabitur quis enim tempus, elementum metus vitae, varius nulla?
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. UT posuere semper mi, ac consectetur lorem
+                dignissim eu. Curabitur quis enim tempus, elementum metus vitae, varius nulla?
             </p>
-     
+
         </div>
         <div class="survey-brand row">
-            
-                <div class="survey-brand--item col">
-                    <div class="survey-brand--item__img survey-brand--item__img--nike current-active">
-                        <img class="img-fluid"src="./logo/Nike_Logo.svg" >
-                    </div>
-                    <p class="brand-name brand-name--checked brand-name--nike">Nike</p>
+
+            <div class="survey-brand--item col">
+                <div class="survey-brand--item__img survey-brand--item__img--nike current-active">
+                    <img class="img-fluid" src="./logo/Nike_Logo.jpg">
                 </div>
-                <div class="survey-brand--item col">
-                    <div class="survey-brand--item__img survey-brand--item__img--puma">
-                        <img  class="img-fluid"src="./logo/Puma_Logo.svg">
-                    </div>
-                    <p class="brand-name">Puma</p>
+                <p class="brand-name brand-name--checked brand-name--nike">Nike</p>
+            </div>
+            <div class="survey-brand--item col">
+                <div class="survey-brand--item__img survey-brand--item__img--puma">
+                    <img class="img-fluid" src="./logo/g-Puma_Logo.png">
                 </div>
-                <div class="survey-brand--item col">
-                    <div class="survey-brand--item__img survey-brand--item__img--asics">
-                        <img class="img-fluid" src="./logo/Asics_Logo.svg">
-                    </div>
-                    <p class="brand-name">Asics</p>
+                <p class="brand-name">Puma</p>
+            </div>
+            <div class="survey-brand--item col">
+                <div class="survey-brand--item__img survey-brand--item__img--asics">
+                    <img class="img-fluid" src="./logo/g-Asics_Logo.png">
                 </div>
-                <div class="survey-brand--item col">
-                    <div class="survey-brand--item__img survey-brand--item__img--adidas">
-                        <img class="img-fluid" src="./logo/Adidas_Logo.svg">
-                    </div>
-                    <p class="brand-name">Adidas</p>
+                <p class="brand-name">Asics</p>
+            </div>
+            <div class="survey-brand--item col">
+                <div class="survey-brand--item__img survey-brand--item__img--adidas">
+                    <img class="img-fluid" src="./logo/g-Adidas_Logo.png">
                 </div>
+                <p class="brand-name">Adidas</p>
+            </div>
 
 
-        
+
 
 
         </div>
 
 
-        <form class="survey-checkbox row ">
-            <div class="survey-checkbox--item col-12">
-                <label for="answerA">Answer A</label>
+        <form class="survey-checkbox row">
+            <label class="survey-checkbox--item col-12">
+                Answer A
+
+
                 <input type="checkbox" id="answerA">
-               
-            </div>
-            <div class="survey-checkbox--item col-12">
-                <label for="answerB">Answer B</label>
+
+            </label>
+            <label class="survey-checkbox--item col-12">
+                Answer B
                 <input type="checkbox" id="answerB">
-            </div>
-            <div class="survey-checkbox--item col-12 ">
-                <label for="answerC">Answer C</label>
+            </label>
+            <label class="survey-checkbox--item col-12 ">
+                Answer C
                 <input type="checkbox" id="answerC">
-            </div>
-            <div class="survey-checkbox--item col-12">
-                <label for="answerD">Answer D</label>
+            </label>
+            <label class="survey-checkbox--item col-12">
+                Answer D
                 <input type="checkbox" id="answerD">
-            </div>
+            </label>
+
         </form>
+
         <div class="survey-dot">
             <div></div>
             <div></div>
@@ -86,11 +94,10 @@
             <div></div>
         </div>
         <div class="survey-button">
-            <button>NEXT</button>
+            <button class="mdc-button mdc-button--raised"> <span class="mdc-button__ripple"></span> Next</button>
         </div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="script.js" async defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="script.js" async defer></script>
 </body>
 
 </html>
